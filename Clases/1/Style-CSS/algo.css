@@ -1,0 +1,23 @@
+body{
+	padding: 2em 6em;
+}
+/*estilo fuente*/
+h1{
+	font-family: Georgia,Times,serif;
+	font-weight: normal;
+	font-size: 12px;
+}
+p{
+	font: 1.5em Baskerville, "Times New Roman",Times,serif;
+	color: red;
+}
+
+a:hover{
+	text-decoration: none;
+}
+a{
+	margin-top: 120px; 
+}
+body{
+	background-color: #1232aa;
+}
