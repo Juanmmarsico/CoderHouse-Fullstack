@@ -1,0 +1,19 @@
+.content{
+	position: relative;
+}
+.nav	{
+	position: 	absolute;
+	width: 200px;
+	left: 0
+}
+section ,nav {
+border: 2px solid blue;
+}
+.section-a{
+	position: absolute;
+	left: 200px;
+}
+.padre{
+	position: relative;
+	margin: 0 0 0 200px;
+}

@@ -1,0 +1,68 @@
+html, body {
+   height: 100%;
+   width: 100%;
+   	font-size: 50px;
+
+  }
+  body{
+  		margin: 0;
+	padding: 0;
+  }
+
+ main{
+ 	height: 100%
+}
+.caralibro{
+	position: fixed;
+	background-color: blue;
+	width: 4em;
+	height: 100%;
+	float:left;
+
+		display: -moz-box;
+  	display: -ms-flexbox;
+ 	display: -webkit-flex;
+  	display: flex; 
+    
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items:center;
+}
+
+.chat{
+	background-color: white;
+	  position: relative;
+  	width: 3em;
+	margin-left: 0.5em;
+
+}
+.rightSection{
+		margin-left: 4em;
+height: 100%;
+}
+
+.insertSectionsHere{
+	display: -moz-box;
+  	display: -ms-flexbox;
+ 	display: -webkit-flex;
+  	display: flex; 
+    
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items:center;
+  text-align: center;
+  height: 100%;
+  padding: 0;
+  vertical-align: center;
+  
+}
+
+.insertSectionsHere > section{
+	width: 5em;
+	height: 7em;
+	border: 0.1em solid black;
+	min-width: 6em;
+}
+
