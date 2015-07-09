@@ -29,11 +29,12 @@ var numero=0;
 		}	
 	}	
 	console.log(cadenaDef);
-	
+
 //invertir el arreglo
 	if (typeof(cadenaDef)=== 'object'){
 		for(numero = cadenaDef.length-1; numero>-1;numero--){
-		invertidaN[cadenaDef.length-numero-1] =cadenaDef[numero];
+		// invertidaN[cadenaDef.length-numero-1] =cadenaDef[numero];
+		invertidaN.push(cadenaDef[numero]);
 	}
 	console.log(invertidaN);
 
