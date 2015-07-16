@@ -1,0 +1,34 @@
+var s = ['+',1,2,3]
+obtenerResultado(s);
+function obtenerResultado(arr){
+try{
+	if(arr[0]=='+' || arr[0]=='sum' || arr[0]=='suma'){
+	return makeArr(arr).reduce(function(total,num){
+	return total+num;},0);
+	};
+		if(arr[0]=='*' || arr[0]=='por' || arr[0]=='.'|| arr[0]=='multiplicar'){
+	return makeArr(arr).reduce(function(total,num){
+	return total*num;},1);
+	};
+		if(arr[0]=='/' || arr[0]=='dividido' || arr[0]=='divition'){
+	return makeArr(arr).reduce(function(total,num){
+	return total/num;},1);
+	};
+		if(arr[0]=='-' || arr[0]=='minus' || arr[0]=='resta'){
+	return makeArr(arr).reduce(function(total,num){
+	return total-num;},0);
+	};
+	return "not a valid operation"
+}catch(err){
+	console.log("no era un array error " + err)
+}
+}
+
+
+function makeArr(arr){
+	var ar= [];
+	for(var i=1; i<arr.length;i++){
+	ar[i-1]=arr[i];
+	}
+	return ar;
+}
