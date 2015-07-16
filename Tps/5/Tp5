@@ -1,26 +1,39 @@
-var s = ['+',1,2,3]
+var s = ['+',1,2,3,4]
 obtenerResultado(s);
 function obtenerResultado(arr){
 try{
 	if(arr[0]=='+' || arr[0]=='sum' || arr[0]=='suma'){
-	return makeArr(arr).reduce(function(total,num){
-	return total+num;},0);
+	// return makeArr(arr).reduce(function(total,num){
+	// return total+num;},0);
+// var ma=makeArr(arr);
+// console.log (ma);
+return sum(makeArr(arr));
+// return sum([1,2,3,4])
+
 	};
 		if(arr[0]=='*' || arr[0]=='por' || arr[0]=='.'|| arr[0]=='multiplicar'){
-	return makeArr(arr).reduce(function(total,num){
-	return total*num;},1);
+	// return makeArr(arr).reduce(function(total,num){
+	// return total*num;},1);
+return multi(makeArr(arr));
+
 	};
 		if(arr[0]=='/' || arr[0]=='dividido' || arr[0]=='divition'){
-	return makeArr(arr).reduce(function(total,num){
-	return total/num;},1);
+	// return makeArr(arr).reduce(function(total,num){
+	// return total/num;},1);
+try{
+return divi(makeArr(arr));
+}catch (err){
+	console.log("la respuesta es japon");
+}
 	};
 		if(arr[0]=='-' || arr[0]=='minus' || arr[0]=='resta'){
-	return makeArr(arr).reduce(function(total,num){
-	return total-num;},0);
+	// return makeArr(arr).reduce(function(total,num){
+	// return total-num;},0);
+return res(makeArr(arr));
 	};
 	return "not a valid operation"
 }catch(err){
-	console.log("no era un array error " + err)
+	console.log("el arreglo tenia cantidad impar de elementos" + err)
 }
 }
 
@@ -30,5 +43,52 @@ function makeArr(arr){
 	for(var i=1; i<arr.length;i++){
 	ar[i-1]=arr[i];
 	}
+	console.log(ar);
 	return ar;
 }
+function sum(arr){
+var sumArr=[];
+var pos=0;
+	for(var i=0;i<arr.length-1;i+=2){
+		sumArr[pos]=arr[i]+arr[i+1];
+		console.log(i);
+pos++;
+	}
+	return sumArr;
+}
+function divi(arr){
+var sumArr=[];
+var pos=0;
+	for(var i=0;i<arr.length-1;i+=2){
+		sumArr[pos]=arr[i]/arr[i+1];
+		console.log(i);
+pos++;
+	}
+	return sumArr;
+}function res(arr){
+var sumArr=[];
+var pos=0;
+	for(var i=0;i<arr.length-1;i+=2){
+		sumArr[pos]=arr[i]-arr[i+1];
+		console.log(i);
+pos++;
+	}
+	return sumArr;
+}
+function multi(arr){
+var sumArr=[];
+var pos=0;
+	for(var i=0;i<arr.length-1;i+=2){
+		sumArr[pos]=arr[i]*arr[i+1];
+		console.log(i);
+pos++;
+	}
+	return sumArr;
+}
+
+
+
+
+
+
+
