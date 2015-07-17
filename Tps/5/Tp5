@@ -1,4 +1,4 @@
-var s = ['+',1,2,3,4]
+var s = ['+',1,2,3,4,5]
 obtenerResultado(s);
 function obtenerResultado(arr){
 try{
@@ -43,7 +43,10 @@ function makeArr(arr){
 	for(var i=1; i<arr.length;i++){
 	ar[i-1]=arr[i];
 	}
-	console.log(ar);
+	// console.log(ar);
+	if(ar.length%2!=0){
+		throw ("el arreglo tiene cantidad impar de elementos a operar");
+	}
 	return ar;
 }
 function sum(arr){
